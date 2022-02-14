@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://www.cssscript.com/demo/sticky.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <script src="jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="../../js/cities.js"></script>
+
+  <link href="css/dealer-home.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/register.css" rel="stylesheet">
+
+  <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+  <!-- <link rel="stylesheet" href="../../css/dealer-home.css" /> -->
+  <title>Welcome Dealer</title>
+</head>
+
+<body>
+
+
+
+  <!-- form -->
+
+  <div class="page-content">
+    <div class="form-v10-content">
+      <form class="form-detail" action="/dealer_details" method="post" id="myform">
+        <div class="form-left">
+          <h2>Dealer Registration</h2>
+          <div class="form-row">
+            <input type="texts" class="form-control" name="username" placeholder="Enter your Name" required>
+
+            <input type="text" class="form-control" name="nature" placeholder="Enter the Nature">
+
+          </div>
+          <div class="form-row">
+            <input type="text" class="form-control" name="weight" placeholder="Weight of Material(kg)" required>
+
+          </div>
+
+          <div class="form-row">
+            <input type="text" class="form-control" name="quantity" placeholder="Quantity" required>
+          </div>
+
+
+        </div>
+        <div class="form-right">
+          <h2>Contact Details</h2>
+          <div class="form-row">
+            <input type="text" class="form-control" name="phonenumber" placeholder="Mobile no." required>
+          </div>
+
+          <div class="form-row">
+            <input type="text" class="form-control" name="country">
+
+          </div>
+
+
+          <div class="form-row">
+            <select onchange="print_city('state1', this.selectedIndex);" id="sts" name="state" class="form-control"
+              required></select>
+          </div>
+          <div class="form-row">
+            <select id="state1" name="city" class="form-control" required></select>
+          </div>
+          <script language="javascript">print_state("sts");</script>
+
+          <div class="form-row-last">
+            <input type="submit" name="register" class="register" value="Register ">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+
+    var c = 0;
+    function menu() {
+      if (c % 2 == 0) {
+        document.querySelector('.cont_drobpdown_menu').className = "cont_drobpdown_menu active";
+        document.querySelector('.cont_icon_trg').className = "cont_icon_trg active";
+        c++;
+      } else {
+        document.querySelector('.cont_drobpdown_menu').className = "cont_drobpdown_menu disable";
+        document.querySelector('.cont_icon_trg').className = "cont_icon_trg disable";
+        c++;
+      }
+    }
+  </script>
+
+
+
+
+</body>
+
+</html>

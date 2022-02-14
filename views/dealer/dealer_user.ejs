@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://www.cssscript.com/demo/sticky.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <script src="jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="cities.js"></script>
+    
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/dealer-home.css" />
+    <title>Welcome Dealer</title>
+  </head>
+  <body>
+
+  
+<div>
+   
+  
+    <div class="cont_menu">
+      <div class="cont_titulo_menu" onclick="menu()">
+    <div class="cont_titulo">
+        <h4>WELCOME DEALER</h4>
+        </div>
+        <div class="cont_icon_menu">
+       <img src="http://danysantos.hol.es/img/planet.png" alt="" />
+    <div class="cont_circle_1"></div>
+    <div class="cont_circle_2"></div>
+    <div class="cont_circle_3"></div>
+    <div class="cont_circle_4"></div>
+        </div>
+      </div>
+    <div class="cont_icon_trg disable">
+    <svg width="46px" height="38px" viewBox="0 0 46 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  >
+        <defs>
+            <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+                <feOffset dx="0" dy="-2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0813575634 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+                <feMerge>
+                    <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                    <feMergeNode in="SourceGraphic"></feMergeNode>
+                </feMerge>
+            </filter>
+        </defs>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+            <polygon id="Triangle-1" fill="#FFFFFF" filter="url(#filter-1)" sketch:type="MSShapeGroup" points="23 7 39 24 7 24 "></polygon>
+        </g>
+    </svg></div>
+    <div class="cont_drobpdown_menu disable" >
+    
+      <ul>
+      <li><a  href="/dealer_profile">View Profile</a></li>
+     <li><hr /></li>
+      <li><a  href="/dealer_city/<%= users._id %>">Driver Details</a></li>
+      <li><hr /></li>
+      <li><a href="/dealer_logout">Logout</a></li>
+    </ul>
+      
+      </div> 
+      </div> 
+    
+    </div>
+
+    <div class="area"></div><nav class="main-menu">
+        <ul>
+            <li>
+                <a href="index.html">
+                    <i class="fa fa-home fa-2x"></i>
+                    <span class="nav-text">
+                        Home Page
+                    </span>
+                </a>
+              
+            </li>
+            <li class="has-subnav">
+                <a href="#">
+                    <i class="fa fa-laptop fa-2x"></i>
+                    <span class="nav-text">
+                        Dealer Profile
+                    </span>
+                </a>
+                
+            </li>
+            <li class="has-subnav">
+                <a href="#">
+                   <i class="fa fa-list fa-2x"></i>
+                    <span class="nav-text">
+                        Booking Dashboard
+                    </span>
+                </a>
+                
+            </li>
+            <li class="has-subnav">
+                <a href="#">
+                   <i class="fa fa-phone fa-2x"></i>
+                    <span class="nav-text">
+                        Contact Admin
+                    </span>
+                </a>
+               
+            </li>
+            
+            <li>
+                <a href="#">
+                   <i class="fa fa-info fa-2x"></i>
+                    <span class="nav-text">
+                        Documentation
+                    </span>
+                </a>
+            </li>
+        </ul>
+
+       
+            <li>
+               <a href="#">
+                     <i class="fa fa-power-off fa-2x"></i>
+                    <span class="nav-text">
+                        Logout
+                    </span>
+                </a>
+            </li>  
+        
+    </nav>
+
+
+
+<script type="text/javascript">
+
+    var c = 0;
+    function menu(){
+      if(c % 2 == 0) {
+    document.querySelector('.cont_drobpdown_menu').className = "cont_drobpdown_menu active";    
+    document.querySelector('.cont_icon_trg').className = "cont_icon_trg active";    
+    c++; 
+      }else{
+    document.querySelector('.cont_drobpdown_menu').className = "cont_drobpdown_menu disable";        
+    document.querySelector('.cont_icon_trg').className = "cont_icon_trg disable";        
+    c++;
+      }
+    }
+    </script>   
+
+
+</body>
+</html>
